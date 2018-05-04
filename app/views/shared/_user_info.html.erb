@@ -1,0 +1,6 @@
+<aside>
+	<%= gravatar_for(current_user) %>
+	<span><%= current_user.name %></span>
+	<span><%= link_to "View my profile", user_path(current_user.id) %></span>
+	<span><%= pluralize(current_user.microposts.count, "micropost") %></span>
+</aside>

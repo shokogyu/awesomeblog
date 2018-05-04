@@ -1,0 +1,28 @@
+<%= provide(:title, @user.name ) %>
+
+<div class="row">
+	<aside class="col-md-4">
+		<%= gravatar_for(@user) %>
+		<h1><%= @user.name %></h1>
+<!-- 		<span><%#= pluralize(@following.count, "Following") %> | </span>	
+		<span><%#= pluralize(@followers.count,"Follower") %></span> -->
+
+		<section class="stats">
+			<%= render 'shared/stats' %>				
+		</section>
+
+		<div class="form-group">
+			<%= render 'follow_form' %>
+		</div>	
+	</aside>
+
+
+	<div class="col-md-8">
+		<div class="microposts">
+<!-- 			<%#= render @user.microposts %> -->
+			<%= render @microposts %>
+		</div>
+		<%= will_paginate @microposts %>
+	</div>
+
+</div>

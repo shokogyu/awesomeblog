@@ -1,0 +1,23 @@
+<%= provide(:title, @title) %>
+
+<div class="row">
+	<div class="col-md-4">
+		<section>
+			<%= gravatar_for(@user) %>
+			<span><%= @user.name %></span>
+			<span><%= pluralize(@user.microposts.count, "micropost") %></span>		
+		</section>
+
+		<section class="stats">
+			<%= render 'shared/stats' %>				
+		</section>
+	</div>
+
+	<div class="col-md-8">
+		<h3><%= @title %></h3>
+		<%= render @users %> 
+	</div>
+</div>
+
+<!-- render @user find users folder and also find _user.html!!
+ -->

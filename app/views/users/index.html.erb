@@ -1,0 +1,33 @@
+<div>
+	<h1>All Users</h1>
+</div>
+
+<%= will_paginate %> <!-- @userをオブジェクトとして認識してくれる -->	
+	<ul class="users">
+		<%= render @users %>
+
+	<!-- render @usersがすること
+		<%# @user,each do |user| %>	
+		<%#= render 'users/user', user: user %>
+		<%#end %> -->
+	</ul>
+
+<%= will_paginate %>
+
+
+
+
+<!-- _user.html.erbへ移動
+<div>
+	<%# @users.each do |user| %>
+	<div>
+		<h4><%#= user.name %></h4>
+		<%#= gravatar_for(user) %>
+		<%# if current_user.admin == true && user.admin == false %> -->
+		<!-- if current_user.admin? && !current_user?(user)  %>
+			<#%= link_to "delete", user_path(user.id), method: :delete, data:{confirm: 'Are you sure?'} %>
+		<% #end %>
+		</div>
+	<%# end %>
+</div>
+ -->
